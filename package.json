@@ -6,7 +6,7 @@
         "build": "vue-tsc && vite build"
     },
     "devDependencies": {
-        "@inertiajs/vue3": "^1.0.0",
+        "@inertiajs/vue3": "2.0",
         "@mdi/font": "^7.4.47",
         "@vitejs/plugin-vue": "^5.0.0",
         "autoprefixer": "^10.4.12",
@@ -20,6 +20,6 @@
     },
     "dependencies": {
         "vite-plugin-vuetify": "^2.0.3",
-        "vuetify": "^3.6.12"
+        "vuetify": "^3.7.11"
     }
 }
