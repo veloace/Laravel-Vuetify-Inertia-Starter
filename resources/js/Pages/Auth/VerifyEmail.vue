@@ -12,10 +12,6 @@ defineOptions({ layout: GuestLayout })
 
 const form = useForm({});
 
-const submit = () => {
-    form.post(route('verification.send'));
-};
-
 const verificationLinkSent = computed(() => props.status === 'verification-link-sent');
 
 </script>

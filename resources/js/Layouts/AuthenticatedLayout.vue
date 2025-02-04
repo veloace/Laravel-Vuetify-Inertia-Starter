@@ -8,10 +8,6 @@ const pageLoading = defineModel('pageLoading', {type: Boolean, default: false})
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 const user = usePage().props.auth.user;
 
-const navigateTo = (routeName) => {
-    router.visit(route(routeName));
-}
-
 router.on('start', () => {
     pageLoading.value = true
 })
@@ -41,7 +37,7 @@ router.on('finish', () => {
                     <v-icon></v-icon>
                     <v-menu activator="parent">
                         <v-list>
-                            <v-list-item link @click="navigateTo('profile.edit')" title="My Account"></v-list-item>
+                            <v-list-item link @click="router.visit(route('profile.edit'))" title="My Account"></v-list-item>
                             <v-list-item link>
                                 <Link :href="route('logout')" method="post" as="span">
                                     Logout

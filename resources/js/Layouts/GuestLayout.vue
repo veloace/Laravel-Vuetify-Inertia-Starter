@@ -6,9 +6,6 @@ const drawer = defineModel('drawer', { type: Boolean, default: false })
 const pageLoading = defineModel('pageLoading', { type: Boolean, default: false })
 
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
-const navigateTo = (routeName) => {
-    router.visit(route(routeName));
-}
 
 router.on('start', () =>{pageLoading.value = true})
 router.on('finish', () => {pageLoading.value = false;drawer.value=false;})
